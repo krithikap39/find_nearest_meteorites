@@ -1,0 +1,32 @@
+#1
+
+print(True and not True)
+
+print(False or not False)
+
+print("cheese" < "crackers")
+
+print([3,2,1] > [1,2,3,4])
+
+
+#2
+
+cart=["rice", "dal", "chocolate",'oil', 5050, 100]
+
+if len(cart) < 3:
+    
+	print("Buy more!")
+
+elif len(cart) >= 3 and len(cart) <= 5:
+    
+	print("Thanks!")
+
+else:
+    
+	print("Discount")
+
+Answer:
+False
+True
+True
+True

@@ -1,0 +1,121 @@
+#1
+
+def determine_price(pet_name):
+    
+	pets={'bird':3.5, 'cat':5.0, 'dog':7.25, 'gerbil':1.5}
+    
+	#price=pets.get(pet_name)
+    
+	try:
+        
+		price=pets[pet_name]
+        
+		print("Price of the {0} is {1}".format(pet_name,price))
+    
+	except KeyError:
+        
+		print("The pet is no longer available !!! ")
+        
+		print("So Enter another pet name: ")
+        
+		pet_name=input()
+        
+		determine_price(pet_name)
+    
+	except NameError as e:
+        
+		print('Check the code syntax!!!')
+ 
+		print(e)   
+
+
+print("Enter a pet name: ")
+
+pet_name = input()
+
+determine_price(pet_name)
+
+#2
+
+def calculate(ip1,ip2,ip3):
+    
+	if ip3 == '+':
+        
+		output = int_ip1 + int_ip2
+    
+	elif ip3 == '-':
+        
+		output = int_ip1 - int_ip2
+    
+	elif ip3 == '*':
+        
+		output = int_ip1 * int_ip2
+    
+	else:
+        
+		output = int_ip1 / int_ip2
+    
+	return output
+
+
+
+print("Enter the 2 numbers: ")
+
+try:
+    
+	ip1=input()
+    
+	int_ip1=int(ip1)
+
+except ValueError:
+    
+	print("Enter a valid number !!!")
+    
+	ip1=input()
+    
+	int_ip1=int(ip1)
+
+
+try:
+    
+	ip2=input()
+    
+	int_ip2=int(ip2)
+
+except ValueError:
+    
+	print("Enter a valid number !!!")
+    
+	ip2=input()
+    
+	int_ip2=int(ip2)
+
+
+
+print("Enter the operations to be performed : + or - or * or /")
+
+oper=['+', '-', '*', '/']
+
+
+ip3=input()
+
+if ip3 in oper:
+    
+	op = calculate(ip1,ip2,ip3)
+    
+	print("Output is " + str(op))
+
+else:
+    
+	print("You have entered a wrong operation!!! ")
+
+
+
+
+
+
+
+    
+    
+    
+    

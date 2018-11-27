@@ -1,0 +1,51 @@
+def numerus(roman_numeral):
+    
+	previous_value=0; numeric_value=0
+    
+    
+	for x in roman_numeral:
+        
+		output_value=convert(x)
+        
+		
+		if previous_value < output_value:
+            
+			numeric_value =  numeric_value - previous_value
+            
+			output_value = output_value - previous_value
+        
+        
+			previous_value = output_value
+  
+      
+		numeric_value =  numeric_value + output_value
+    
+    
+	print("Numeric Value:" +str(numeric_value))	
+		
+
+
+def convert(roman_letter):
+    
+	
+	roman_translation={"i":1,"v":5,"x":10,"l":50,"c":100,"m":1000}
+	
+	
+	
+	if roman_letter in roman_translation:
+	    
+		output=roman_translation.get(roman_letter)
+	
+	else:
+	    
+		output=0 
+	
+	return output
+    
+
+
+print("Enter roman numeral: ")
+
+roman_numeral=input()
+
+numerus(roman_numeral)

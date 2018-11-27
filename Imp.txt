@@ -1,0 +1,10 @@
+1) Python standard library:
+https://docs.python.org/3/library/
+
+2) Python Package Index (PyPi):
+https://pypi.org/
+
+3) \ can be used to break lines of code as continuation in next line
+
+4) Using python to construct a URL that gives federated users access to AWS console by obtaining temporary credentials: (Boto Package installed using pyp environment)
+https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_enable-console-custom-url.html

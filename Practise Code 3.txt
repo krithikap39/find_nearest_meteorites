@@ -1,0 +1,70 @@
+1)
+Spade=[]
+
+Club=[]
+
+Heart=[]
+
+Diamond=[]
+
+
+
+for pack in range(1,5):
+    
+	for cards in range(1,14):
+        
+		if pack==1:
+            
+			Spade.append(cards)
+        
+		elif pack==2:
+            
+			Club.append(cards)
+        
+		elif pack==3:
+            
+			Heart.append(cards)
+        
+		else:
+            
+			Diamond.append(cards)
+
+
+
+Spade[0], Club[0], Heart[0], Diamond[0] = 'Ace', 'Ace','Ace','Ace'
+
+
+
+Spade[10:14] = 'King','Queen','Jack'
+
+Club[10:14] = 'King','Queen','Jack'
+
+Heart[10:14] = 'King','Queen','Jack'
+
+Diamond[10:14] = 'King','Queen','Jack'
+
+
+
+print("Spade Deck is   : " + str(Spade))
+
+print("Club Deck is    : " + str(Club))
+
+print("Heart Deck is   : " + str(Heart))
+
+print("Diamond Deck is : " + str(Diamond))
+
+2)
+number = 1
+
+iteration=0
+
+while number <= 1000000000000:
+    
+	number = number *2
+    
+	iteration+=1
+
+
+
+print(number)
+print("Number of iterations is: " + str(iteration))

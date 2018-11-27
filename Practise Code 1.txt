@@ -1,0 +1,17 @@
+number_of_seconds_in_a_day = 24*60*60
+
+print("Number of seconds in a day:" + str(number_of_seconds_in_a_day))
+
+
+email_addresses=['krithikap39@gmail.com','pselvam@gmail.com','yashan@gmail.com']
+
+print(email_addresses)
+
+email_addresses=email_addresses+['jegan@gmail.com']+['latha@gmail.com']
+
+print(email_addresses)
+
+
+value=(3^10)/5
+
+print(value)

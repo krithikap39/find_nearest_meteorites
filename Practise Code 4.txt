@@ -1,0 +1,91 @@
+#1
+
+def igpay(word):
+    
+	vowel='aeiouAEIOU'
+    
+	if word[0] in vowel:
+        
+		newword=word+"way"
+        
+		print("New Word is: " +newword)
+    
+	else:
+        
+		newword=word[1:]+word[0]+"ay"
+        
+		print("New Word is: " +newword)
+
+
+
+print("Enter the word: ")
+
+word=input()
+
+igpay(word)
+
+#2
+
+def numerus(roman_numeral):
+    
+	roman_letters="ivxlcm"
+    
+	previous_value=0 
+    numeric_value=0 
+    
+    
+	for x in roman_numeral:
+        
+		if x == "i":
+            
+			output_value=1
+        
+		elif x == "v":
+            
+			output_value=5
+        
+		elif x == "x":
+            
+			output_value=10
+        
+		elif x == "l":
+            
+			output_value=50
+        
+		elif x == "c":
+            
+			output_value=100
+        
+		elif x == "m":
+            
+			output_value=1000
+        
+		else:
+            
+			output_value=0
+ 
+      
+        
+	if previous_value < output_value:
+            
+		numeric_value =  numeric_value - previous_value 
+            
+		output_value = output_value - previous_value
+        
+        
+	
+	numeric_value =  numeric_value + output_value
+        
+	previous_value = output_value
+  
+      
+    
+	print("Numeric Value:" +str(numeric_value)) 
+    
+
+
+print("Enter roman numeral: ")
+
+roman_numeral=input()
+
+numerus(roman_numeral)

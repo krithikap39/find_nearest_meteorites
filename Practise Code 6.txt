@@ -1,0 +1,141 @@
+#1
+
+def intersect(list1, list2):
+    
+	output=[]; k = 0
+    
+	for i in list1:
+        
+		for j in list2:
+            
+			if i == j :
+                
+				output.append(i)
+                
+				k=+1
+                
+				break
+            
+			else:
+                
+				continue
+    
+	return output        
+                
+                
+
+
+
+list1=[1,2,3,100,55,67,89]
+
+list2=[5,3,7,67,200,1000,89]
+
+print("Intersection of 2 lists is ")
+
+print(intersect(list1,list2))
+
+ans: [3,67,89]
+
+#2.1
+#Using sets instead of lists and using the in-built function intersection
+list1=[1,2,3,100,55,67,89]
+
+list2=[5,3,7,67,200,1000,89]
+
+output=list(set(list1).intersection(list2))
+
+print("Intersection of 2 lists is:")
+
+print(output)
+
+#2.2
+#Using sets instead of lists and using the in-built function intersection
+list1={1,2,3,100,55,67,89}
+
+
+list2={5,3,7,67,200,1000,89}
+
+
+output=list(list1.intersection(list2))
+
+
+print("Intersection of 2 lists is:")
+
+print(output)
+
+ans: [89,3,67] for both
+
+#3.1
+def pair(vegs,fruits):
+    
+	combined=[]
+    
+	for x in vegs:
+        
+		for y in fruits:
+            
+			#if vegs.index(x) == fruits.index(y):
+                
+				z = x + " " + y
+                
+				combined.append(z)
+    
+	return combined
+            
+    
+
+
+
+vegs=["Carrot","Radish","Potato","Tomato"]
+
+fruits=["Apples","Oranges","Grapes","Berries"]
+
+print(pair(vegs,fruits))
+
+ans: Combinations like ['Carrot Apples', 'Tomato Berries']
+
+#3.2
+def pair(vegs,fruits):
+    
+	
+	combined=[]
+	
+	combined=vegs + fruits
+	
+	return combined
+
+
+
+vegs=["Carrot","Radish","Potato","Tomato"]
+
+
+fruits=["Apples","Oranges","Grapes","Berries"]
+
+
+print(pair(vegs,fruits))
+
+ans: Appending like [Carrot,'Radish','Potato','Tomato','Apples','Oranges','Grapes','Berries's]
+
+#3.3
+def pair(vegs,fruits):
+    
+	combined=[]
+    
+	for (x,y) in zip(vegs,fruits):
+        
+		z = x,y
+        
+		combined.append(z)
+    
+	return combined
+
+
+
+vegs=["Carrot","Radish","Potato","Tomato"]
+
+
+fruits=["Apples","Oranges","Grapes","Berries"]
+
+
+print(pair(vegs,fruits))
+ans: Combinations like [('Carrot', 'Apples'), ('Tomato', 'Berries')]
